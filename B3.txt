@@ -1,0 +1,16 @@
+https://graphics.cs.rutgers.edu/node/302/
+
+We used Unity and KADAPT to create a behavior tree in order to tell a story. Our hero, Daniel, loves to dance. He is called to the Killjoy headquarters where the Council of No Fun attempt to judge his dancing, but instead contract the dancing fever and are left partying while Daniel exits the facility.
+
+The player can press SPACEBAR at any point to open the door, allowing more judges to path in and interact with Daniel.
+
+Affordances:
+ApproachOrient
+	This affordance makes one character walk up to the other and stop a distance away so that they are not trying to occupy the same space. Both characters then turn to face each other.
+
+DanceOff
+	This affordance makes Daniel do a random dance while the judge shakes his head in disappointment. The judge is then also forced to dance.
+
+Custom Control Node:
+We implemented a RandomNode as our custom control node. It works similarly to a SequenceShuffle. It randomly picks a node and executes it, returning that node's runstate success or failure and ignoring the rest of the nodes given.
+We use this in our scenario by having Daniel play a random dance move every time, making our story nonlinear.
